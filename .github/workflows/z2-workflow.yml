@@ -61,6 +61,7 @@ jobs:
           exit-code: 1
           ignore-unfixed: true
           severity: CRITICAL,HIGH
+          scanners: vuln
           format: table
           output: trivy-results.txt
 
