@@ -12,7 +12,7 @@ services:
       - backend
 
   backend:
-    image: prem1rom/z1-docker-backend:latest
+    image: ghcr.io/prom03/z1-docker-backend:sha-a289a4f
     build:
       context: .
       dockerfile: Dockerfile
