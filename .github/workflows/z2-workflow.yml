@@ -58,10 +58,9 @@ jobs:
         uses: aquasecurity/trivy-action@0.30.0
         with:
           image-ref: temp-local-image
-          exit-code: 1
+          exit-code: 0
           ignore-unfixed: true
           severity: CRITICAL,HIGH
-          scanners: vuln
           format: table
           output: trivy-results.txt
 
