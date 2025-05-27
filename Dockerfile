@@ -1,10 +1,11 @@
-FROM node:20-alpine AS builder
+FROM node:18-alpine AS builder
 LABEL org.opencontainers.image.authors="Przemysław Romaniak"
 WORKDIR /app
 COPY backend .
 RUN npm install express
+RUN npm install cross-spawn@7.0.5
 
-FROM node:20-alpine AS runner
+FROM node:18-alpine AS runner
 LABEL org.opencontainers.image.authors="Przemysław Romaniak"
 RUN apk add --no-cache curl
 
