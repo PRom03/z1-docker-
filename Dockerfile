@@ -3,8 +3,9 @@ LABEL org.opencontainers.image.authors="Przemysław Romaniak"
 WORKDIR /app
 COPY backend .
 RUN npm install express
-RUN npm install cross-spawn@7.0.5 --force && \
-  npm dedupe
+RUN find node_modules -type d -name "cross-spawn" -exec rm -rf {} + && \
+    npm install cross-spawn@7.0.5 --force && \
+    npm dedupe
 
 FROM node:18-alpine AS runner
 LABEL org.opencontainers.image.authors="Przemysław Romaniak"
