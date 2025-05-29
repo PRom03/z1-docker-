@@ -1,10 +1,10 @@
-FROM node:18-alpine AS builder
+FROM node:24-alpine AS builder
 LABEL org.opencontainers.image.authors="Przemysław Romaniak"
 WORKDIR /app
 COPY backend .
 RUN npm install express
 
-FROM node:18-alpine AS runner
+FROM node:24-alpine AS runner
 LABEL org.opencontainers.image.authors="Przemysław Romaniak"
 RUN apk add --no-cache curl
 
