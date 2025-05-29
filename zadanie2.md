@@ -46,40 +46,8 @@ frontend-1  | 172.20.0.1 - - [26/May/2025:18:54:47 +0000] "GET /api/weather?city
 
 ![obraz](https://github.com/user-attachments/assets/bf1fe670-b623-4885-899d-7e6fdecdb1e7)
 
-C:\Users\romp1\z1-docker-master>gh workflow run
-? Select a workflow Z2 (z2-workflow.yml)
-✓ Created workflow_dispatch event for z2-workflow.yml at main
 
-To see runs for this workflow, try: gh run list --workflow=z2-workflow.yml
-
-C:\Users\romp1\z1-docker-master>gh run watch
-? Select a workflow run * Z2, Z2 [main] 4s ago
-✓ main Z2 · 15272408808
-Triggered via workflow_dispatch about 1 minute ago
-
-JOBS
-✓ Build and push to ghcr.io in 1m50s (ID 42950887370)
-  ✓ Set up job
-  ✓ Checkout
-  ✓ QEMU setup
-  ✓ Docker Buildx setup
-  ✓ Extract Docker metadata
-  ✓ Sign in - ghcr.io
-  ✓ Log in to DockerHub
-  ✓ Build for a vulnerability check
-  ✓ Run Trivy
-  ✓ Build and push to GHCR
-  ✓ Post Build and push to GHCR
-  ✓ Post Run Trivy
-  ✓ Post Build for a vulnerability check
-  ✓ Post Log in to DockerHub
-  ✓ Post Sign in - ghcr.io
-  ✓ Post Docker Buildx setup
-  ✓ Post QEMU setup
-  ✓ Post Checkout
-  ✓ Complete job
-
-✓ Run Z2 (15272408808) completed with 'success'
+node:18-alpine jako obraz bazowy:
 
 C:\Users\romp1\z1-docker-master>docker pull ghcr.io/prom03/z1-docker-backend:sha-baa7d33
 sha-baa7d33: Pulling from prom03/z1-docker-backend
@@ -134,6 +102,7 @@ pkg:npm/cross-spawn@7.0.3
 What's next:
     View base image update recommendations → docker scout recommendations ghcr.io/prom03/z1-docker-backend:sha-baa7d33
 
+node:24-alpine jako obraz bazowy:
 
 C:\Users\romp1\z1-docker-master>gh workflow run
 ? Select a workflow Z2 (z2-workflow.yml)
