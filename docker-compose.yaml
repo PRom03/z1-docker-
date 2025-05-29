@@ -12,7 +12,7 @@ services:
       - backend
 
   backend:
-    image: ghcr.io/prom03/z1-docker-backend:sha-a289a4f
+    image: ghcr.io/prom03/z1-docker-backend:sha-72b3a36
     build:
       context: .
       dockerfile: Dockerfile
